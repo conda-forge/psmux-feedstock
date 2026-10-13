@@ -1,5 +1,5 @@
 context:
-  version: "3.3.8"
+  version: "3.4.0"
 
 package:
   name: psmux
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/psmux/psmux/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 0912d5061c1fb99fa0992d2ef400ab0efe771fa4026ea1498df6c30f38b1b9a5
+  sha256: a25b97ce1ca3624d73b79bedbd672d1235c5a146a5c819b87e0023362ad431e2
 
 build:
   skip: unix
@@ -30,9 +30,9 @@ requirements:
 
 tests:
   - script:
-    - psmux --help
-    - pmux --help
-    - tmux --help
+      - psmux --help
+      - pmux --help
+      - tmux --help
   - package_contents:
       bin:
         - psmux
